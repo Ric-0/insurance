@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@showIndex');
+Route::get('/contact', 'ContactController@showContact');
 Route::post('/devis', 'IndexController@formContact');

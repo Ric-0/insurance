@@ -56,15 +56,12 @@
             obligatoires.</small>
         <div class="row" style="">
             <div class="col">
-                <img class="img-modal" src="{{ asset('img/men_whith_letter.png') }}">
-            </div>
-            <div class="col">
                 <button id="send-form" type="submit" class="btn btn-outline ">
                     <b>Valider</b>
                 </button>
             </div>
             <div class="col">
-                <img class="img-modal" src="{{ asset('img/post_box.png') }}">
+                <img class="img-modal" src="{{ asset('img/assur.png') }}">
             </div>
         </div>
     </form>

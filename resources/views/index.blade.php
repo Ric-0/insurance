@@ -284,6 +284,10 @@
             Fidèles à nos <b>valeurs humaines</b> et forts de notre <b>expérience professionnelle</b>,<br>
             nous avons à cœur votre satisfaction.
         </p>
+        <button id="button-contact" type="button" class="btn btn-outline " data-toggle="modal">
+            <a href="/contact"><b>Contactez-nous</b></a>
+        </button>
+        <br>
         <img src="{{ asset('img/adviser.png') }}">
     </div>
 </div>

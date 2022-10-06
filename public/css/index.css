@@ -292,6 +292,20 @@ hr{
     border:solid 2px transparent;
 
 }
+
+#button-contact{
+    background: white;
+    color: black;
+    z-index : 2;
+    font-size:20px;
+    width:300px;
+    border-color: white;
+    border-radius: 50px;
+    padding: 13px;
+    border:solid 2px transparent;
+
+}
+
 #button-devis:hover{
     background:transparent;
     border:solid 2px #5e5e5e;

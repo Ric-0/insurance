@@ -30,7 +30,7 @@ class ContactRequest extends FormRequest
             'email' => 'required|email',
             'phone' => 'required',
             'nb_vehicle' => 'required|integer',
-            'captcha' => 'required|captcha'
+            // 'captcha' => 'required|captcha'
         ];
     }
 }

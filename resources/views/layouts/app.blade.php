@@ -87,16 +87,16 @@
         <div class="collapse navbar-collapse " id="navbarsExample07XL">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#formules">Les formules<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/#formules">Les formules<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#tarifs">Nos tarifs</a>
+                    <a class="nav-link" href="/#tarifs">Nos tarifs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#engagement">Notre engagement</a>
+                    <a class="nav-link" href="/#engagement">Notre engagement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#qui-sommes-nous">Qui sommes-nous ?</a>
+                    <a class="nav-link" href="/#qui-sommes-nous">Qui sommes-nous ?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -175,10 +175,11 @@
                     <p class="text-2020">&copy; 2020</p>
                 </div>
                 <div class="nav-footer">
-                    <a href="#formules">Les formules</a>
-                    <a href="#tarifs">Nos tarifs</a>
-                    <a href="#engagement">Notre engagement</a>
-                    <a href="#qui-sommes-nous">Qui sommes-nous ?</a>
+                    <a href="/#formules">Les formules</a>
+                    <a href="/#tarifs">Nos tarifs</a>
+                    <a href="/#engagement">Notre engagement</a>
+                    <a href="/#qui-sommes-nous">Qui sommes-nous ?</a>
+                    <a href="/contact">Contact</a>
                 </div>
             </div>
         </footer>

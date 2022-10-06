@@ -15,8 +15,9 @@
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset('css/index_mobile.css')}}" media="screen and (max-width: 800px)" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index_mobile.css') }}"
+        media="screen and (max-width: 800px)" />
 </head>
 
 <body>
@@ -73,7 +74,8 @@
                         style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:588px;fill:white;">ASSURANCE</text>
                     <text x="145px" y="1111.3px"
                         style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:588px;fill:white;">C
-                        <tspan x="561.304px " y="1111.3px ">O</tspan>NDUITE</text>
+                        <tspan x="561.304px " y="1111.3px ">O</tspan>NDUITE
+                    </text>
                 </g>
             </svg>
         </a>
@@ -114,7 +116,7 @@
                 </div>
             </div>
             <div class="col-5">
-                <img src="{{asset('img/assur.png')}}">
+                <img src="{{ asset('img/assur.png') }}">
             </div>
             <div style="text-align: center" id="assurance-mobile">
 
@@ -124,30 +126,30 @@
                 </button>
             </div>
         </div>
-        @if(\Illuminate\Support\Facades\Session::get('success'))
-        <div class="container" style="margin-top: 3%">
-            <div class="alert">
-                <div class="alert alert-success" role="alert" style="text-align: center">
-                    {{\Illuminate\Support\Facades\Session::get('success')}}
+        @if (\Illuminate\Support\Facades\Session::get('success'))
+            <div class="container" style="margin-top: 3%">
+                <div class="alert">
+                    <div class="alert alert-success" role="alert" style="text-align: center">
+                        {{ \Illuminate\Support\Facades\Session::get('success') }}
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
-        @if(\Illuminate\Support\Facades\Session::get('error'))
-        <div class="container" style="margin-top: 3%">
-            <div class="alert">
-                <div class="alert alert-danger" role="alert" style="text-align: center">
-                    {{\Illuminate\Support\Facades\Session::get('error')}}
+        @if (\Illuminate\Support\Facades\Session::get('error'))
+            <div class="container" style="margin-top: 3%">
+                <div class="alert">
+                    <div class="alert alert-danger" role="alert" style="text-align: center">
+                        {{ \Illuminate\Support\Facades\Session::get('error') }}
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
         @if ($errors->any())
             <div class="container" style="margin-top: 3%">
                 <div class="alert">
                     <div class="alert alert-danger" role="alert" style="text-align: center">
                         @foreach ($errors->all() as $error)
-                            @if(stristr($error,'captcha'))
+                            @if (stristr($error, 'captcha'))
                                 Le Captcha renseigné n'est pas correct, veuillez réessayer.
                             @endif
                         @endforeach
@@ -160,7 +162,8 @@
     <div style="" id="formules">
         <div class="align-center">
             <p class="big-title">Différentes formules, différents prix</p>
-            <p class="big-text">Nos assurances sont créées <b>sur mesure</b>. Trouvez celle qui <b>correspond à vos besoins</b> dès aujourd’hui.</p>
+            <p class="big-text">Nos assurances sont créées <b>sur mesure</b>. Trouvez celle qui <b>correspond à vos
+                    besoins</b> dès aujourd’hui.</p>
             <div class="row">
                 <hr>
                 <div class="col">
@@ -195,8 +198,8 @@
                 </div>
                 <hr>
                 <div class="col">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-medical" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-medical"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
                         class="svg-inline--fa fa-file-medical fa-w-12 fa-3x" style="width:75px">
                         <path fill="#EACC85"
                             d="M377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-153 31V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 160v48c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8z"
@@ -225,11 +228,11 @@
         <div class="align-center">
             <p class="big-title">Nos offres sont-elles moins chères ? Oui, elles le sont !</p>
             <p class="big-text">Nos offres sont <b>les moins chères du marché</b> et elles comptent bien le rester.</p>
-            <img src="{{asset('img/car_security.png')}}" class="car-security">
+            <img src="{{ asset('img/car_security.png') }}" class="car-security">
             <div class="container">
                 <div class="row">
                     <div class="div-money">
-                        <img src="{{asset('img/money.png')}}" class="money">
+                        <img src="{{ asset('img/money.png') }}" class="money">
                         <div>
                             <p>À partir de :</p>
                             <p>33€/mois par véhicule *</p>
@@ -259,7 +262,7 @@
             <p class="big-text">Notre équipe répond à vos questions et <b>vous accompagne au quotidien !</b> <br />Vous
                 pouvez toujours compter sur
                 nous.</p>
-            <img src="{{asset('img/help.png')}}">
+            <img src="{{ asset('img/help.png') }}">
         </div>
     </div>
 
@@ -284,13 +287,14 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <div class="modal-body">
-                                <form method="POST" action="{{url('/devis')}}">
+                                <form method="POST" action="{{ url('/devis') }}">
                                     @csrf
                                     <div class="form-group">
                                         <label class="form-group has-float-label">
                                             <input type="text" class="form-control" id="ds-name" name="ds_name"
                                                 aria-describedby="ds-name" required>
-                                            <span style="background-color:white;font-size: 15px;">Nom de l'auto-école *</span>
+                                            <span style="background-color:white;font-size: 15px;">Nom de l'auto-école
+                                                *</span>
                                         </label>
                                     </div>
                                     <div class="form-row">
@@ -299,7 +303,8 @@
                                                 <label class="form-group has-float-label">
                                                     <input type="text" class="form-control" id="firstname"
                                                         name="firstname" aria-describedby="firstname" required>
-                                                    <span style="background-color:white;font-size: 15px">Prénom *</span>
+                                                    <span style="background-color:white;font-size: 15px">Prénom
+                                                        *</span>
                                                 </label>
 
                                             </div>
@@ -325,31 +330,35 @@
                                         <label class="form-group has-float-label">
                                             <input type="tel" class="form-control" id="phone" name="phone"
                                                 aria-describedby="phone" required>
-                                            <span style="background-color:white;font-size: 15px">Numéro de téléphone *</span>
+                                            <span style="background-color:white;font-size: 15px">Numéro de téléphone
+                                                *</span>
                                         </label>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-group has-float-label">
-                                            <input type="number" class="form-control" id="nb-vehicle" name="nb_vehicle"
-                                                aria-describedby="nb-vehicle" required>
-                                            <span style="background-color:white;font-size: 15px">Nombre de véhicules *</span>
+                                            <input type="number" class="form-control" id="nb-vehicle"
+                                                name="nb_vehicle" aria-describedby="nb-vehicle" required>
+                                            <span style="background-color:white;font-size: 15px">Nombre de véhicules
+                                                *</span>
                                         </label>
                                     </div>
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <div class="captcha">
                                             <span>{!! captcha_img() !!}</span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-group has-float-label">
-                                            <input id="captcha" type="text" class="form-control" placeholder="" name="captcha">
+                                            <input id="captcha" type="text" class="form-control" placeholder=""
+                                                name="captcha">
                                             <span>Entrer le captcha *</span>
                                         </label>
-                                    </div>
-                                    <small id="help" class="form-text text-muted">Les champs suivis d’une * sont obligatoires.</small>
+                                    </div> --}}
+                                    <small id="help" class="form-text text-muted">Les champs suivis d’une * sont
+                                        obligatoires.</small>
                                     <div class="row" style="">
                                         <div class="col">
-                                            <img class="img-modal" src="{{asset('img/men_whith_letter.png')}}">
+                                            <img class="img-modal" src="{{ asset('img/men_whith_letter.png') }}">
                                         </div>
                                         <div class="col">
                                             <button id="send-form" type="submit" class="btn btn-outline ">
@@ -357,7 +366,7 @@
                                             </button>
                                         </div>
                                         <div class="col">
-                                            <img class="img-modal" src="{{asset('img/post_box.png')}}">
+                                            <img class="img-modal" src="{{ asset('img/post_box.png') }}">
                                         </div>
                                     </div>
                                 </form>
@@ -377,7 +386,7 @@
                 Fidèles à nos <b>valeurs humaines</b> et forts de notre <b>expérience professionnelle</b>,<br>
                 nous avons à cœur votre satisfaction.
             </p>
-            <img src="{{asset('img/adviser.png')}}">
+            <img src="{{ asset('img/adviser.png') }}">
         </div>
     </div>
 
@@ -436,7 +445,8 @@
                                 style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:588px;fill:black;">ASSURANCE</text>
                             <text x="145px" y="1111.3px"
                                 style="font-family:'Montserrat-Medium', 'Montserrat';font-weight:500;font-size:588px;fill:black;">C
-                                <tspan x="561.304px " y="1111.3px ">O</tspan>NDUITE</text>
+                                <tspan x="561.304px " y="1111.3px ">O</tspan>NDUITE
+                            </text>
                         </g>
                     </svg>
                 </a>
@@ -451,9 +461,15 @@
         </div>
     </footer>
     <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
